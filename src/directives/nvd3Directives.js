@@ -79,6 +79,7 @@
                     color: '&',
                     x: '&',
                     y: '&',
+                    xscale: '&',
                     forcex: '@',
                     forcey: '@',
                     isArea: '@',
@@ -191,6 +192,10 @@
 
                                     if(attrs.tooltipcontent){
                                         chart.tooltipContent(scope.tooltipcontent());
+                                    }
+
+                                    if (attrs.xscale) {
+                                        chart.lines.xScale(scope.xscale());
                                     }
 
                                     scope.d3Call(data, chart);
